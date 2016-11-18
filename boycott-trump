@@ -1,0 +1,22 @@
+#!/bin/sh
+
+declare -a sites=('6pm.com' 'amazon.com' 'bloomingdales.com' 'belk.com' 'bluefly.com' 'bonton.com' 'bedbathandbeyond.com' 'bedbath.com' 'burlingtoncoatfactory.com' 'carsons.com' 'c21stores.com' 'dillards.com' 'dsw.com' 'thebay.com' 'hsn.com' 'jet.com' 'kushnercompanies.com' 'lordandtaylor.com' 'macys.com' 'marshallsonline.com' 'neimanmarcus.com' 'nordstrom.com' 'overstock.com' 'perfumania.com' 'saksoff5th.com' 'steinmart.com' 'tjx.com' 'trumpgolf.com' 'trumphotels.com' 'trumpwinery.com' 'wayfair.com' 'winners.ca' 'zappos.com' 'abcsupply.com' 'forbes.com' 'hobbylobby.com' 'lendingtree.com' 'millercoors.com' 'nascar.com' 'newbalance.com' 'nationalenquirer.com' 'people.com' 'uline.com' 'yuengling.com' 'moca.org');
+
+length=${#sites[@]}
+
+# Blocks a site via the HOSTS file.
+function block {
+	for (( c=0; c<$length; c++))
+	do
+		echo "127.0.0.1\t${sites[$c]}" >> /etc/hosts
+		echo "127.0.0.1\twww.${sites[$c]}" >> /etc/hosts
+	done
+}
+
+if (( $EUID != 0)); then
+	echo "Please run as root"
+	exit
+fi
+
+block
+sudo dscacheutil -flushcache
