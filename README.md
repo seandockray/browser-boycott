@@ -4,16 +4,15 @@ This is a script for boycotting businesses that work with or support the Trump f
 
 ## Installation (only for OSX now)
 
-1. Download the script here
-2. Find your _Terminal_ and open it (it is in _Applications_ - _Utilities_)
-3. Copy & Paste:
+1. Find your _Terminal_ and open it (it is in _Applications_ - _Utilities_)
+2. Copy & paste the following three lines.
 
 ```
-cd ~/Downloads
+wget wget https://github.com/seandockray/browser-boycott/raw/master/boycott-trump
 chmod 755 boycott-trump
 sudo ./boycott-trump
 ```
-4. You should be prompted for your administrator password. Didn't I mention that you need to be administrator of your machine?
+4. You should be prompted for your administrator password. Did I mention that you need to be administrator of your machine?
 5. If you absolutely need to undo this, you will need to edit your /etc/hosts file.
 
 
