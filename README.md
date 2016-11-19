@@ -18,7 +18,7 @@ sudo ./boycott-trump
 
 ## Development Notes
 
-* The initial list of domains is taken from [https://docs.google.com/spreadsheets/d/1vu0Y0HvadMgG_LN7dF8W7M66oPCcx_nmSARQWirV7iY/htmlview](this spreadsheet). Others should fork, file issues, submit pull requests, etc. to add to the list. For example, [I added moca.org](https://www.artforum.com/news/id=59943).
+* The initial list of domains is taken from [this spreadhseet](https://docs.google.com/spreadsheets/d/1vu0Y0HvadMgG_LN7dF8W7M66oPCcx_nmSARQWirV7iY/htmlview). Others should fork, file issues, submit pull requests, etc. to add to the list. For example, [I added moca.org](https://www.artforum.com/news/id=59943).
 * At the moment, it is written for OSX but could easily be adapted for other operating systems.
 * Some kind of installer would be helpful.
 * An updater would be even more helpful.
